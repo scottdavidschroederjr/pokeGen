@@ -1045,13 +1045,647 @@ const pokemonData = [
     {
       "name": "tyranitar",
       "generation": 2
-    }
-
+    },
+    {
+      "name": "treecko",
+      "generation": 3
+    },
+    {
+      "name": "torchic",
+      "generation": 3
+    },
+    {
+      "name": "mudkip",
+      "generation": 3
+    },
+    {
+      "name": "poochyena",
+      "generation": 3
+    },
+    {
+      "name": "zigzagoon",
+      "generation": 3
+    },
+    {
+      "name": "wurmple",
+      "generation": 3
+    },
+    {
+      "name": "lotad",
+      "generation": 3
+    },
+    {
+      "name": "seedot",
+      "generation": 3
+    },
+    {
+      "name": "taillow",
+      "generation": 3
+    },
+    {
+      "name": "wingull",
+      "generation": 3
+    },
+    {
+      "name": "ralts",
+      "generation": 3
+    },
+    {
+      "name": "surskit",
+      "generation": 3
+    },
+    {
+      "name": "shroomish",
+      "generation": 3
+    },
+    {
+      "name": "slakoth",
+      "generation": 3
+    },
+    {
+      "name": "nincada",
+      "generation": 3
+    },
+    {
+      "name": "whismur",
+      "generation": 3
+    },
+    {
+      "name": "makuhita",
+      "generation": 3
+    },
+    {
+      "name": "azurill",
+      "generation": 3
+    },
+    {
+      "name": "nosepass",
+      "generation": 3
+    },
+    {
+      "name": "skitty",
+      "generation": 3
+    },
+    {
+      "name": "sableye",
+      "generation": 3
+    },
+    {
+      "name": "mawile",
+      "generation": 3
+    },
+    {
+      "name": "aron",
+      "generation": 3
+    },
+    {
+      "name": "meditite",
+      "generation": 3
+    },
+    {
+      "name": "electrike",
+      "generation": 3
+    },
+    {
+      "name": "plusle",
+      "generation": 3
+    },
+    {
+      "name": "minun",
+      "generation": 3
+    },
+  {
+    "name": "volbeat",
+    "generation": 3
+  },
+  {
+    "name": "illumise",
+    "generation": 3
+  },
+  {
+    "name": "gulpin",
+    "generation": 3
+  },
+  {
+    "name": "carvanha",
+    "generation": 3
+  },
+  {
+    "name": "wailmer",
+    "generation": 3
+  },
+  {
+    "name": "numel",
+    "generation": 3
+  },
+  {
+    "name": "torkoal",
+    "generation": 3
+  },
+  {
+    "name": "spoink",
+    "generation": 3
+  },
+  {
+    "name": "spinda",
+    "generation": 3
+  },
+  {
+    "name": "trapinch",
+    "generation": 3
+  },
+  {
+    "name": "cacnea",
+    "generation": 3
+  },
+  {
+    "name": "swablu",
+    "generation": 3
+  },
+  {
+    "name": "zangoose",
+    "generation": 3
+  },
+  {
+    "name": "seviper",
+    "generation": 3
+  },
+  {
+    "name": "lunatone",
+    "generation": 3
+  },
+  {
+    "name": "solrock",
+    "generation": 3
+  },
+  {
+    "name": "barboach",
+    "generation": 3
+  },
+  {
+    "name": "corphish",
+    "generation": 3
+  },
+  {
+    "name": "baltoy",
+    "generation": 3
+  },
+  {
+    "name": "lileep",
+    "generation": 3
+  },
+  {
+    "name": "anorith",
+    "generation": 3
+  },
+  {
+    "name": "feebas",
+    "generation": 3
+  },
+  {
+    "name": "castform",
+    "generation": 3
+  },
+  {
+    "name": "volbeat",
+    "generation": 3
+  },
+  {
+    "name": "illumise",
+    "generation": 3
+  },
+  {
+    "name": "gulpin",
+    "generation": 3
+  },
+  {
+    "name": "carvanha",
+    "generation": 3
+  },
+  {
+    "name": "wailmer",
+    "generation": 3
+  },
+  {
+    "name": "numel",
+    "generation": 3
+  },
+  {
+    "name": "torkoal",
+    "generation": 3
+  },
+  {
+    "name": "spoink",
+    "generation": 3
+  },
+  {
+    "name": "spinda",
+    "generation": 3
+  },
+  {
+    "name": "trapinch",
+    "generation": 3
+  },
+  {
+    "name": "cacnea",
+    "generation": 3
+  },
+  {
+    "name": "swablu",
+    "generation": 3
+  },
+  {
+    "name": "zangoose",
+    "generation": 3
+  },
+  {
+    "name": "seviper",
+    "generation": 3
+  },
+  {
+    "name": "lunatone",
+    "generation": 3
+  },
+  {
+    "name": "solrock",
+    "generation": 3
+  },
+  {
+    "name": "barboach",
+    "generation": 3
+  },
+  {
+    "name": "corphish",
+    "generation": 3
+  },
+  {
+    "name": "baltoy",
+    "generation": 3
+  },
+  {
+    "name": "lileep",
+    "generation": 3
+  },
+  {
+    "name": "anorith",
+    "generation": 3
+  },
+  {
+    "name": "feebas",
+    "generation": 3
+  },
+  {
+    "name": "castform",
+    "generation": 3
+  },
+  {
+    "name": "kecleon",
+    "generation": 3
+  },
+  {
+    "name": "shuppet",
+    "generation": 3
+  },
+  {
+    "name": "duskull",
+    "generation": 3
+  },
+  {
+    "name": "tropius",
+    "generation": 3
+  },
+  {
+    "name": "absol",
+    "generation": 3
+  },
+  {
+    "name": "wynaut",
+    "generation": 3
+  },
+  {
+    "name": "snorunt",
+    "generation": 3
+  },
+  {
+    "name": "spheal",
+    "generation": 3
+  },
+  {
+    "name": "clamperl",
+    "generation": 3
+  },
+  {
+    "name": "relicanth",
+    "generation": 3
+  },
+  {
+    "name": "luvdisc",
+    "generation": 3
+  },
+  {
+    "name": "bagon",
+    "generation": 3
+  },
+  {
+    "name": "beldum",
+    "generation": 3
+  },
+  {
+    "name": "regirock",
+    "generation": 3
+  },
+  {
+    "name": "regice",
+    "generation": 3
+  },
+  {
+    "name": "registeel",
+    "generation": 3
+  },
+  {
+    "name": "latias",
+    "generation": 3
+  },
+  {
+    "name": "latios",
+    "generation": 3
+  },
+  {
+    "name": "kyogre",
+    "generation": 3
+  },
+  {
+    "name": "groudon",
+    "generation": 3
+  },
+  {
+    "name": "rayquaza",
+    "generation": 3
+  },
+  {
+    "name": "jirachi",
+    "generation": 3
+  },
+  {
+    "name": "deoxys",
+    "generation": 3
+  },
+  {
+    "name": "grovyle",
+    "generation": 3
+  },
+  {
+    "name": "sceptile",
+    "generation": 3
+  },
+  {
+    "name": "combusken",
+    "generation": 3
+  },
+  {
+    "name": "blaziken",
+    "generation": 3
+  },
+  {
+    "name": "marshtomp",
+    "generation": 3
+  },
+  {
+    "name": "swampert",
+    "generation": 3
+  },
+  {
+    "name": "mightyena",
+    "generation": 3
+  },
+  {
+    "name": "linoone",
+    "generation": 3
+  },
+  {
+    "name": "silcoon",
+    "generation": 3
+  },
+  {
+    "name": "beautifly",
+    "generation": 3
+  },
+  {
+    "name": "cascoon",
+    "generation": 3
+  },
+  {
+    "name": "dustox",
+    "generation": 3
+  },
+  {
+    "name": "lombre",
+    "generation": 3
+  },
+  {
+    "name": "ludicolo",
+    "generation": 3
+  },
+  {
+    "name": "nuzleaf",
+    "generation": 3
+  },
+  {
+    "name": "shiftry",
+    "generation": 3
+  },
+  {
+    "name": "swellow",
+    "generation": 3
+  },
+  {
+    "name": "pelipper",
+    "generation": 3
+  },
+  {
+    "name": "kirlia",
+    "generation": 3
+  },
+  {
+    "name": "gardevoir",
+    "generation": 3
+  },
+  {
+    "name": "masquerain",
+    "generation": 3
+  },
+  {
+    "name": "breloom",
+    "generation": 3
+  },
+  {
+    "name": "vigoroth",
+    "generation": 3
+  },
+  {
+    "name": "slaking",
+    "generation": 3
+  },
+  {
+    "name": "ninjask",
+    "generation": 3
+  },
+  {
+    "name": "shedinja",
+    "generation": 3
+  },
+  {
+    "name": "loudred",
+    "generation": 3
+  },
+  {
+    "name": "exploud",
+    "generation": 3
+  },
+  {
+    "name": "hariyama",
+    "generation": 3
+  },
+  {
+    "name": "delcatty",
+    "generation": 3
+  },
+  {
+    "name": "lairon",
+    "generation": 3
+  },
+  {
+    "name": "aggron",
+    "generation": 3
+  },
+  {
+    "name": "medicham",
+    "generation": 3
+  },
+  {
+    "name": "manectric",
+    "generation": 3
+  },
+  {
+    "name": "roselia",
+    "generation": 3
+  },
+  {
+    "name": "swalot",
+    "generation": 3
+  },
+  {
+    "name": "sharpedo",
+    "generation": 3
+  },
+  {
+    "name": "wailord",
+    "generation": 3
+  },
+  {
+    "name": "camerupt",
+    "generation": 3
+  },
+  {
+    "name": "grumpig",
+    "generation": 3
+  },
+  {
+    "name": "vibrava",
+    "generation": 3
+  },
+  {
+    "name": "flygon",
+    "generation": 3
+  },
+  {
+    "name": "cacturne",
+    "generation": 3
+  },
+  {
+    "name": "altaria",
+    "generation": 3
+  },
+  {
+    "name": "whiscash",
+    "generation": 3
+  },
+  {
+    "name": "crawdaunt",
+    "generation": 3
+  },
+  {
+    "name": "claydol",
+    "generation": 3
+  },
+  {
+    "name": "cradily",
+    "generation": 3
+  },
+  {
+    "name": "armaldo",
+    "generation": 3
+  },
+  {
+    "name": "milotic",
+    "generation": 3
+  },
+  {
+    "name": "banette",
+    "generation": 3
+  },
+  {
+    "name": "dusclops",
+    "generation": 3
+  },
+  {
+    "name": "chimecho",
+    "generation": 3
+  },
+  {
+    "name": "glalie",
+    "generation": 3
+  },
+  {
+    "name": "sealeo",
+    "generation": 3
+  },
+  {
+    "name": "walrein",
+    "generation": 3
+  },
+  {
+    "name": "huntail",
+    "generation": 3
+  },
+  {
+    "name": "gorebyss",
+    "generation": 3
+  },
+  {
+    "name": "shelgon",
+    "generation": 3
+  },
+  {
+    "name": "salamence",
+    "generation": 3
+  },
+  {
+    "name": "metang",
+    "generation": 3
+  },
+  {
+    "name": "metagross",
+    "generation": 3
+  }
+  
 ];
 
 
 
 
 
+
+
 //this will get the generation of the mon from their name
-console.log(pokemonData.filter(item => item.name === 'donphan').map(item => item.generation))
+console.log(pokemonData.filter(item => item.name === 'pikachu').map(item => item.generation))
