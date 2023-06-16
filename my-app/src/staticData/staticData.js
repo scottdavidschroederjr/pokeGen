@@ -1,27 +1,7 @@
 //https://pokeapi.co/api/v2/generation/
 //https://www.smogon.com/stats/2023-05/
 
-const puppeteer = require('puppeteer');
 
-async function run() {
-  const browser = await puppeteer.launch({
-    headless: 'new',
-  });
-  const page = await browser.newPage();
-  await page.goto('https://www.smogon.com/dex/sv/pokemon/glastrier/');
-
-
-  //pulls what formats mon is used in 
-  //TODO some pages have TWO values (mega rayqa), pull the higher
-  const htmlContent = await page.$eval('.FormatList', el => el.innerText);
-
-
-  console.log(htmlContent);
-
-  await browser.close();
-}
-
-run();
 
 
 const tierValue = {
@@ -40,7 +20,7 @@ const tierValue = {
 }
 
 
-
+//TODO there are dups in here, clean them up even though it won't effect its use
 const pokemonData = [
   {
     "name": "bulbasaur",
@@ -1677,15 +1657,2504 @@ const pokemonData = [
   {
     "name": "metagross",
     "generation": 3
-  }
+  },
+  {
+    "name": "turtwig",
+    "generation": 4
+  },
+  {
+    "name": "chimchar",
+    "generation": 4
+  },
+  {
+    "name": "piplup",
+    "generation": 4
+  },
+  {
+    "name": "starly",
+    "generation": 4
+  },
+  {
+    "name": "bidoof",
+    "generation": 4
+  },
+  {
+    "name": "kricketot",
+    "generation": 4
+  },
+  {
+    "name": "shinx",
+    "generation": 4
+  },
+  {
+    "name": "budew",
+    "generation": 4
+  },
+  {
+    "name": "cranidos",
+    "generation": 4
+  },
+  {
+    "name": "shieldon",
+    "generation": 4
+  },
+  {
+    "name": "burmy",
+    "generation": 4
+  },
+  {
+    "name": "combee",
+    "generation": 4
+  },
+  {
+    "name": "pachirisu",
+    "generation": 4
+  },
+  {
+    "name": "buizel",
+    "generation": 4
+  },
+  {
+    "name": "cherubi",
+    "generation": 4
+  },
+  {
+    "name": "shellos",
+    "generation": 4
+  },
+  {
+    "name": "drifloon",
+    "generation": 4
+  },
+  {
+    "name": "buneary",
+    "generation": 4
+  },
+  {
+    "name": "glameow",
+    "generation": 4
+  },
+  {
+    "name": "chingling",
+    "generation": 4
+  },
+  {
+    "name": "stunky",
+    "generation": 4
+  },
+  {
+    "name": "bronzor",
+    "generation": 4
+  },
+  {
+    "name": "bonsly",
+    "generation": 4
+  },
+  {
+    "name": "mime-jr",
+    "generation": 4
+  },
+  {
+    "name": "happiny",
+    "generation": 4
+  },
+  {
+    "name": "chatot",
+    "generation": 4
+  },
+  {
+    "name": "spiritomb",
+    "generation": 4
+  },
+  {
+    "name": "gible",
+    "generation": 4
+  },
+  {
+    "name": "munchlax",
+    "generation": 4
+  },
+  {
+    "name": "riolu",
+    "generation": 4
+  },
+  {
+    "name": "hippopotas",
+    "generation": 4
+  },
+  {
+    "name": "skorupi",
+    "generation": 4
+  },
+  {
+    "name": "croagunk",
+    "generation": 4
+  },
+  {
+    "name": "carnivine",
+    "generation": 4
+  },
+  {
+    "name": "finneon",
+    "generation": 4
+  },
+  {
+    "name": "mantyke",
+    "generation": 4
+  },
+  {
+    "name": "snover",
+    "generation": 4
+  },
+  {
+    "name": "rotom",
+    "generation": 4
+  },
+  {
+    "name": "uxie",
+    "generation": 4
+  },
+  {
+    "name": "mesprit",
+    "generation": 4
+  },
+  {
+    "name": "azelf",
+    "generation": 4
+  },
+  {
+    "name": "dialga",
+    "generation": 4
+  },
+  {
+    "name": "palkia",
+    "generation": 4
+  },
+  {
+    "name": "heatran",
+    "generation": 4
+  },
+  {
+    "name": "regigigas",
+    "generation": 4
+  },
+  {
+    "name": "giratina",
+    "generation": 4
+  },
+  {
+    "name": "cresselia",
+    "generation": 4
+  },
+  {
+    "name": "phione",
+    "generation": 4
+  },
+  {
+    "name": "manaphy",
+    "generation": 4
+  },
+  {
+    "name": "darkrai",
+    "generation": 4
+  },
+  {
+    "name": "shaymin",
+    "generation": 4
+  },
+  {
+    "name": "arceus",
+    "generation": 4
+  },
+  {
+    "name": "grotle",
+    "generation": 4
+  },
+  {
+    "name": "torterra",
+    "generation": 4
+  },
+  {
+    "name": "monferno",
+    "generation": 4
+  },
+  {
+    "name": "infernape",
+    "generation": 4
+  },
+  {
+    "name": "prinplup",
+    "generation": 4
+  },
+  {
+    "name": "empoleon",
+    "generation": 4
+  },
+  {
+    "name": "staravia",
+    "generation": 4
+  },
+  {
+    "name": "staraptor",
+    "generation": 4
+  },
+  {
+    "name": "bibarel",
+    "generation": 4
+  },
+  {
+    "name": "kricketune",
+    "generation": 4
+  },
+  {
+    "name": "luxio",
+    "generation": 4
+  },
+  {
+    "name": "luxray",
+    "generation": 4
+  },
+  {
+    "name": "roserade",
+    "generation": 4
+  },
+  {
+    "name": "rampardos",
+    "generation": 4
+  },
+  {
+    "name": "bastiodon",
+    "generation": 4
+  },
+  {
+    "name": "wormadam",
+    "generation": 4
+  },
+  {
+    "name": "mothim",
+    "generation": 4
+  },
+  {
+    "name": "vespiquen",
+    "generation": 4
+  },
+  {
+    "name": "floatzel",
+    "generation": 4
+  },
+  {
+    "name": "cherrim",
+    "generation": 4
+  },
+  {
+    "name": "gastrodon",
+    "generation": 4
+  },
+  {
+    "name": "ambipom",
+    "generation": 4
+  },
+  {
+    "name": "drifblim",
+    "generation": 4
+  },
+  {
+    "name": "lopunny",
+    "generation": 4
+  },
+  {
+    "name": "mismagius",
+    "generation": 4
+  },
+  {
+    "name": "honchkrow",
+    "generation": 4
+  },
+  {
+    "name": "purugly",
+    "generation": 4
+  },
+  {
+    "name": "skuntank",
+    "generation": 4
+  },
+  {
+    "name": "bronzong",
+    "generation": 4
+  },
+  {
+    "name": "gabite",
+    "generation": 4
+  },
+  {
+    "name": "garchomp",
+    "generation": 4
+  },
+  {
+    "name": "lucario",
+    "generation": 4
+  },
+  {
+    "name": "hippowdon",
+    "generation": 4
+  },
+  {
+    "name": "drapion",
+    "generation": 4
+  },
+  {
+    "name": "toxicroak",
+    "generation": 4
+  },
+  {
+    "name": "lumineon",
+    "generation": 4
+  },
+  {
+    "name": "abomasnow",
+    "generation": 4
+  },
+  {
+    "name": "weavile",
+    "generation": 4
+  },
+  {
+    "name": "magnezone",
+    "generation": 4
+  },
+  {
+    "name": "lickilicky",
+    "generation": 4
+  },
+  {
+    "name": "rhyperior",
+    "generation": 4
+  },
+  {
+    "name": "tangrowth",
+    "generation": 4
+  },
+  {
+    "name": "electivire",
+    "generation": 4
+  },
+  {
+    "name": "magmortar",
+    "generation": 4
+  },
+  {
+    "name": "togekiss",
+    "generation": 4
+  },
+  {
+    "name": "yanmega",
+    "generation": 4
+  },
+  {
+    "name": "leafeon",
+    "generation": 4
+  },
+  {
+    "name": "glaceon",
+    "generation": 4
+  },
+  {
+    "name": "gliscor",
+    "generation": 4
+  },
+  {
+    "name": "mamoswine",
+    "generation": 4
+  },
+  {
+    "name": "porygon-z",
+    "generation": 4
+  },
+  {
+    "name": "gallade",
+    "generation": 4
+  },
+  {
+    "name": "probopass",
+    "generation": 4
+  },
+  {
+    "name": "dusknoir",
+    "generation": 4
+  },
+  {
+    "name": "froslass",
+    "generation": 4
+  },
+  {
+    "name": "victini",
+    "generation": 5
+  },
+  {
+    "name": "snivy",
+    "generation": 5
+  },
+  {
+    "name": "tepig",
+    "generation": 5
+  },
+  {
+    "name": "oshawott",
+    "generation": 5
+  },
+  {
+    "name": "patrat",
+    "generation": 5
+  },
+  {
+    "name": "lillipup",
+    "generation": 5
+  },
+  {
+    "name": "purrloin",
+    "generation": 5
+  },
+  {
+    "name": "pansage",
+    "generation": 5
+  },
+  {
+    "name": "pansear",
+    "generation": 5
+  },
+  {
+    "name": "panpour",
+    "generation": 5
+  },
+  {
+    "name": "munna",
+    "generation": 5
+  },
+  {
+    "name": "pidove",
+    "generation": 5
+  },
+  {
+    "name": "blitzle",
+    "generation": 5
+  },
+  {
+    "name": "roggenrola",
+    "generation": 5
+  },
+  {
+    "name": "woobat",
+    "generation": 5
+  },
+  {
+    "name": "drilbur",
+    "generation": 5
+  },
+  {
+    "name": "audino",
+    "generation": 5
+  },
+  {
+    "name": "timburr",
+    "generation": 5
+  },
+  {
+    "name": "tympole",
+    "generation": 5
+  },
+  {
+    "name": "throh",
+    "generation": 5
+  },
+  {
+    "name": "sawk",
+    "generation": 5
+  },
+  {
+    "name": "sewaddle",
+    "generation": 5
+  },
+  {
+    "name": "venipede",
+    "generation": 5
+  },
+  {
+    "name": "cottonee",
+    "generation": 5
+  },
+  {
+    "name": "petilil",
+    "generation": 5
+  },
+  {
+    "name": "basculin",
+    "generation": 5
+  },
+  {
+    "name": "sandile",
+    "generation": 5
+  },
+  {
+    "name": "darumaka",
+    "generation": 5
+  },
+  {
+    "name": "maractus",
+    "generation": 5
+  },
+  {
+    "name": "dwebble",
+    "generation": 5
+  },
+  {
+    "name": "scraggy",
+    "generation": 5
+  },
+  {
+    "name": "sigilyph",
+    "generation": 5
+  },
+  {
+    "name": "yamask",
+    "generation": 5
+  },
+  {
+    "name": "tirtouga",
+    "generation": 5
+  },
+  {
+    "name": "archen",
+    "generation": 5
+  },
+  {
+    "name": "trubbish",
+    "generation": 5
+  },
+  {
+    "name": "zorua",
+    "generation": 5
+  },
+  {
+    "name": "minccino",
+    "generation": 5
+  },
+  {
+    "name": "gothita",
+    "generation": 5
+  },
+  {
+    "name": "solosis",
+    "generation": 5
+  },
+  {
+    "name": "ducklett",
+    "generation": 5
+  },
+  {
+    "name": "vanillite",
+    "generation": 5
+  },
+  {
+    "name": "deerling",
+    "generation": 5
+  },
+  {
+    "name": "emolga",
+    "generation": 5
+  },
+  {
+    "name": "karrablast",
+    "generation": 5
+  },
+  {
+    "name": "foongus",
+    "generation": 5
+  },
+  {
+    "name": "frillish",
+    "generation": 5
+  },
+  {
+    "name": "alomomola",
+    "generation": 5
+  },
+  {
+    "name": "joltik",
+    "generation": 5
+  },
+  {
+    "name": "ferroseed",
+    "generation": 5
+  },
+  {
+    "name": "klink",
+    "generation": 5
+  },
+  {
+    "name": "tynamo",
+    "generation": 5
+  },
+  {
+    "name": "elgyem",
+    "generation": 5
+  },
+  {
+    "name": "litwick",
+    "generation": 5
+  },
+  {
+    "name": "krookodile",
+    "generation": 5
+  },
+  {
+    "name": "darmanitan",
+    "generation": 5
+  },
+  {
+    "name": "crustle",
+    "generation": 5
+  },
+  {
+    "name": "scrafty",
+    "generation": 5
+  },
+  {
+    "name": "cofagrigus",
+    "generation": 5
+  },
+  {
+    "name": "carracosta",
+    "generation": 5
+  },
+  {
+    "name": "archeops",
+    "generation": 5
+  },
+  {
+    "name": "garbodor",
+    "generation": 5
+  },
+  {
+    "name": "zoroark",
+    "generation": 5
+  },
+  {
+    "name": "cinccino",
+    "generation": 5
+  },
+  {
+    "name": "gothorita",
+    "generation": 5
+  },
+  {
+    "name": "reuniclus",
+    "generation": 5
+  },
+  {
+    "name": "swanna",
+    "generation": 5
+  },
+  {
+    "name": "vanillish",
+    "generation": 5
+  },
+  {
+    "name": "vanilluxe",
+    "generation": 5
+  },
+  {
+    "name": "sawsbuck",
+    "generation": 5
+  },
+  {
+    "name": "escavalier",
+    "generation": 5
+  },
+  {
+    "name": "amoonguss",
+    "generation": 5
+  },
+  {
+    "name": "jellicent",
+    "generation": 5
+  },
+  {
+    "name": "galvantula",
+    "generation": 5
+  },
+  {
+    "name": "ferrothorn",
+    "generation": 5
+  },
+  {
+    "name": "klang",
+    "generation": 5
+  },
+  {
+    "name": "klinklang",
+    "generation": 5
+  },
+  {
+    "name": "eelektrik",
+    "generation": 5
+  },
+  {
+    "name": "eelektross",
+    "generation": 5
+  },
+  {
+    "name": "beheeyem",
+    "generation": 5
+  },
+  {
+    "name": "lampent",
+    "generation": 5
+  },
+  {
+    "name": "axew",
+    "generation": 5
+  },
+  {
+    "name": "cubchoo",
+    "generation": 5
+  },
+  {
+    "name": "cryogonal",
+    "generation": 5
+  },
+  {
+    "name": "shelmet",
+    "generation": 5
+  },
+  {
+    "name": "stunfisk",
+    "generation": 5
+  },
+  {
+    "name": "mienfoo",
+    "generation": 5
+  },
+  {
+    "name": "druddigon",
+    "generation": 5
+  },
+  {
+    "name": "golett",
+    "generation": 5
+  },
+  {
+    "name": "pawniard",
+    "generation": 5
+  },
+  {
+    "name": "bouffalant",
+    "generation": 5
+  },
+  {
+    "name": "rufflet",
+    "generation": 5
+  },
+  {
+    "name": "vullaby",
+    "generation": 5
+  },
+  {
+    "name": "heatmor",
+    "generation": 5
+  },
+  {
+    "name": "durant",
+    "generation": 5
+  },
+  {
+    "name": "deino",
+    "generation": 5
+  },
+  {
+    "name": "larvesta",
+    "generation": 5
+  },
+  {
+    "name": "cobalion",
+    "generation": 5
+  },
+  {
+    "name": "terrakion",
+    "generation": 5
+  },
+  {
+    "name": "virizion",
+    "generation": 5
+  },
+  {
+    "name": "tornadus",
+    "generation": 5
+  },
+  {
+    "name": "thundurus",
+    "generation": 5
+  },
+  {
+    "name": "reshiram",
+    "generation": 5
+  },
+  {
+    "name": "zekrom",
+    "generation": 5
+  },
+  {
+    "name": "landorus",
+    "generation": 5
+  },
+  {
+    "name": "kyurem",
+    "generation": 5
+  },
+  {
+    "name": "keldeo",
+    "generation": 5
+  },
+  {
+    "name": "meloetta",
+    "generation": 5
+  },
+  {
+    "name": "genesect",
+    "generation": 5
+  },
+  {
+    "name": "servine",
+    "generation": 5
+  },
+  {
+    "name": "serperior",
+    "generation": 5
+  },
+  {
+    "name": "pignite",
+    "generation": 5
+  },
+  {
+    "name": "emboar",
+    "generation": 5
+  },
+  {
+    "name": "dewott",
+    "generation": 5
+  },
+  {
+    "name": "samurott",
+    "generation": 5
+  },
+  {
+    "name": "watchog",
+    "generation": 5
+  },
+  {
+    "name": "herdier",
+    "generation": 5
+  },
+  {
+    "name": "stoutland",
+    "generation": 5
+  },
+  {
+    "name": "liepard",
+    "generation": 5
+  },
+  {
+    "name": "simisage",
+    "generation": 5
+  },
+  {
+    "name": "simisear",
+    "generation": 5
+  },
+  {
+    "name": "simipour",
+    "generation": 5
+  },
+  {
+    "name": "musharna",
+    "generation": 5
+  },
+  {
+    "name": "tranquill",
+    "generation": 5
+  },
+  {
+    "name": "unfezant",
+    "generation": 5
+  },
+  {
+    "name": "zebstrika",
+    "generation": 5
+  },
+  {
+    "name": "boldore",
+    "generation": 5
+  },
+  {
+    "name": "gigalith",
+    "generation": 5
+  },
+  {
+    "name": "swoobat",
+    "generation": 5
+  },
+  {
+    "name": "excadrill",
+    "generation": 5
+  },
+  {
+    "name": "gurdurr",
+    "generation": 5
+  },
+  {
+    "name": "conkeldurr",
+    "generation": 5
+  },
+  {
+    "name": "palpitoad",
+    "generation": 5
+  },
+  {
+    "name": "seismitoad",
+    "generation": 5
+  },
+  {
+    "name": "swadloon",
+    "generation": 5
+  },
+  {
+    "name": "leavanny",
+    "generation": 5
+  },
+  {
+    "name": "whirlipede",
+    "generation": 5
+  },
+  {
+    "name": "scolipede",
+    "generation": 5
+  },
+  {
+    "name": "whimsicott",
+    "generation": 5
+  },
+  {
+    "name": "lilligant",
+    "generation": 5
+  },
+  {
+    "name": "krokorok",
+    "generation": 5
+  },
+  {
+    "name": "gothitelle",
+    "generation": 5
+  },
+  {
+    "name": "duosion",
+    "generation": 5
+  },
+  {
+    "name": "chandelure",
+    "generation": 5
+  },
+  {
+    "name": "fraxure",
+    "generation": 5
+  },
+  {
+    "name": "haxorus",
+    "generation": 5
+  },
+  {
+    "name": "beartic",
+    "generation": 5
+  },
+  {
+    "name": "accelgor",
+    "generation": 5
+  },
+  {
+    "name": "mienshao",
+    "generation": 5
+  },
+  {
+    "name": "golurk",
+    "generation": 5
+  },
+  {
+    "name": "bisharp",
+    "generation": 5
+  },
+  {
+    "name": "braviary",
+    "generation": 5
+  },
+  {
+    "name": "mandibuzz",
+    "generation": 5
+  },
+  {
+    "name": "zweilous",
+    "generation": 5
+  },
+  {
+    "name": "hydreigon",
+    "generation": 5
+  },
+  {
+    "name": "volcarona",
+    "generation": 5
+  },
+  {
+    "name": "chespin",
+    "generation": 6
+  },
+  {
+    "name": "fennekin",
+    "generation": 6
+  },
+  {
+    "name": "froakie",
+    "generation": 6
+  },
+  {
+    "name": "bunnelby",
+    "generation": 6
+  },
+  {
+    "name": "fletchling",
+    "generation": 6
+  },
+  {
+    "name": "scatterbug",
+    "generation": 6
+  },
+  {
+    "name": "litleo",
+    "generation": 6
+  },
+  {
+    "name": "flabebe",
+    "generation": 6
+  },
+  {
+    "name": "skiddo",
+    "generation": 6
+  },
+  {
+    "name": "pancham",
+    "generation": 6
+  },
+  {
+    "name": "furfrou",
+    "generation": 6
+  },
+  {
+    "name": "espurr",
+    "generation": 6
+  },
+  {
+    "name": "honedge",
+    "generation": 6
+  },
+  {
+    "name": "spritzee",
+    "generation": 6
+  },
+  {
+    "name": "swirlix",
+    "generation": 6
+  },
+  {
+    "name": "inkay",
+    "generation": 6
+  },
+  {
+    "name": "binacle",
+    "generation": 6
+  },
+  {
+    "name": "skrelp",
+    "generation": 6
+  },
+  {
+    "name": "clauncher",
+    "generation": 6
+  },
+  {
+    "name": "helioptile",
+    "generation": 6
+  },
+  {
+    "name": "tyrunt",
+    "generation": 6
+  },
+  {
+    "name": "amaura",
+    "generation": 6
+  },
+  {
+    "name": "hawlucha",
+    "generation": 6
+  },
+  {
+    "name": "dedenne",
+    "generation": 6
+  },
+  {
+    "name": "carbink",
+    "generation": 6
+  },
+  {
+    "name": "goomy",
+    "generation": 6
+  },
+  {
+    "name": "klefki",
+    "generation": 6
+  },
+  {
+    "name": "phantump",
+    "generation": 6
+  },
+  {
+    "name": "pumpkaboo",
+    "generation": 6
+  },
+  {
+    "name": "bergmite",
+    "generation": 6
+  },
+  {
+    "name": "noibat",
+    "generation": 6
+  },
+  {
+    "name": "xerneas",
+    "generation": 6
+  },
+  {
+    "name": "yveltal",
+    "generation": 6
+  },
+  {
+    "name": "zygarde",
+    "generation": 6
+  },
+  {
+    "name": "diancie",
+    "generation": 6
+  },
+  {
+    "name": "hoopa",
+    "generation": 6
+  },
+  {
+    "name": "volcanion",
+    "generation": 6
+  },
+  {
+    "name": "quilladin",
+    "generation": 6
+  },
+  {
+    "name": "chesnaught",
+    "generation": 6
+  },
+  {
+    "name": "braixen",
+    "generation": 6
+  },
+  {
+    "name": "delphox",
+    "generation": 6
+  },
+  {
+    "name": "frogadier",
+    "generation": 6
+  },
+  {
+    "name": "greninja",
+    "generation": 6
+  },
+  {
+    "name": "diggersby",
+    "generation": 6
+  },
+  {
+    "name": "fletchinder",
+    "generation": 6
+  },
+  {
+    "name": "talonflame",
+    "generation": 6
+  },
+  {
+    "name": "spewpa",
+    "generation": 6
+  },
+  {
+    "name": "vivillon",
+    "generation": 6
+  },
+  {
+    "name": "pyroar",
+    "generation": 6
+  },
+  {
+    "name": "floette",
+    "generation": 6
+  },
+  {
+    "name": "florges",
+    "generation": 6
+  },
+  {
+    "name": "gogoat",
+    "generation": 6
+  },
+  {
+    "name": "pangoro",
+    "generation": 6
+  },
+  {
+    "name": "meowstic",
+    "generation": 6
+  },
+  {
+    "name": "doublade",
+    "generation": 6
+  },
+  {
+    "name": "aegislash",
+    "generation": 6
+  },
+  {
+    "name": "aromatisse",
+    "generation": 6
+  },
+  {
+    "name": "slurpuff",
+    "generation": 6
+  },
+  {
+    "name": "malamar",
+    "generation": 6
+  },
+  {
+    "name": "barbaracle",
+    "generation": 6
+  },
+  {
+    "name": "dragalge",
+    "generation": 6
+  },
+  {
+    "name": "clawitzer",
+    "generation": 6
+  },
+  {
+    "name": "heliolisk",
+    "generation": 6
+  },
+  {
+    "name": "tyrantrum",
+    "generation": 6
+  },
+  {
+    "name": "aurorus",
+    "generation": 6
+  },
+  {
+    "name": "sylveon",
+    "generation": 6
+  },
+  {
+    "name": "sliggoo",
+    "generation": 6
+  },
+  {
+    "name": "goodra",
+    "generation": 6
+  },
+  {
+    "name": "trevenant",
+    "generation": 6
+  },
+  {
+    "name": "gourgeist",
+    "generation": 6
+  },
+  {
+    "name": "avalugg",
+    "generation": 6
+  },
+  {
+    "name": "noivern",
+    "generation": 6
+  },
+  {
+    "name": "rowlet",
+    "generation": 7
+  },
+  {
+    "name": "litten",
+    "generation": 7
+  },
+  {
+    "name": "popplio",
+    "generation": 7
+  },
+  {
+    "name": "pikipek",
+    "generation": 7
+  },
+  {
+    "name": "yungoos",
+    "generation": 7
+  },
+  {
+    "name": "grubbin",
+    "generation": 7
+  },
+  {
+    "name": "crabrawler",
+    "generation": 7
+  },
+  {
+    "name": "oricorio",
+    "generation": 7
+  },
+  {
+    "name": "cutiefly",
+    "generation": 7
+  },
+  {
+    "name": "rockruff",
+    "generation": 7
+  },
+  {
+    "name": "wishiwashi",
+    "generation": 7
+  },
+  {
+    "name": "mareanie",
+    "generation": 7
+  },
+  {
+    "name": "mudbray",
+    "generation": 7
+  },
+  {
+    "name": "dewpider",
+    "generation": 7
+  },
+  {
+    "name": "fomantis",
+    "generation": 7
+  },
+  {
+    "name": "morelull",
+    "generation": 7
+  },
+  {
+    "name": "salandit",
+    "generation": 7
+  },
+  {
+    "name": "stufful",
+    "generation": 7
+  },
+  {
+    "name": "bounsweet",
+    "generation": 7
+  },
+  {
+    "name": "comfey",
+    "generation": 7
+  },
+  {
+    "name": "oranguru",
+    "generation": 7
+  },
+  {
+    "name": "passimian",
+    "generation": 7
+  },
+  {
+    "name": "wimpod",
+    "generation": 7
+  },
+  {
+    "name": "sandygast",
+    "generation": 7
+  },
+  {
+    "name": "pyukumuku",
+    "generation": 7
+  },
+  {
+    "name": "type-null",
+    "generation": 7
+  },
+  {
+    "name": "minior",
+    "generation": 7
+  },
+  {
+    "name": "komala",
+    "generation": 7
+  },
+  {
+    "name": "turtonator",
+    "generation": 7
+  },
+  {
+    "name": "togedemaru",
+    "generation": 7
+  },
+  {
+    "name": "mimikyu",
+    "generation": 7
+  },
+  {
+    "name": "bruxish",
+    "generation": 7
+  },
+  {
+    "name": "drampa",
+    "generation": 7
+  },
+  {
+    "name": "dhelmise",
+    "generation": 7
+  },
+  {
+    "name": "jangmo-o",
+    "generation": 7
+  },
+  {
+    "name": "tapu-koko",
+    "generation": 7
+  },
+  {
+    "name": "tapu-lele",
+    "generation": 7
+  },
+  {
+    "name": "tapu-bulu",
+    "generation": 7
+  },
+  {
+    "name": "tapu-fini",
+    "generation": 7
+  },
+  {
+    "name": "cosmog",
+    "generation": 7
+  },
+  {
+    "name": "nihilego",
+    "generation": 7
+  },
+  {
+    "name": "buzzwole",
+    "generation": 7
+  },
+  {
+    "name": "pheromosa",
+    "generation": 7
+  },
+  {
+    "name": "xurkitree",
+    "generation": 7
+  },
+  {
+    "name": "celesteela",
+    "generation": 7
+  },
+  {
+    "name": "kartana",
+    "generation": 7
+  },
+  {
+    "name": "guzzlord",
+    "generation": 7
+  },
+  {
+    "name": "necrozma",
+    "generation": 7
+  },
+  {
+    "name": "magearna",
+    "generation": 7
+  },
+  {
+    "name": "marshadow",
+    "generation": 7
+  },
+  {
+    "name": "poipole",
+    "generation": 7
+  },
+  {
+    "name": "stakataka",
+    "generation": 7
+  },
+  {
+    "name": "blacephalon",
+    "generation": 7
+  },
+  {
+    "name": "zeraora",
+    "generation": 7
+  },
+  {
+    "name": "meltan",
+    "generation": 7
+  },
+  {
+    "name": "dartrix",
+    "generation": 7
+  },
+  {
+    "name": "decidueye",
+    "generation": 7
+  },
+  {
+    "name": "torracat",
+    "generation": 7
+  },
+  {
+    "name": "incineroar",
+    "generation": 7
+  },
+  {
+    "name": "brionne",
+    "generation": 7
+  },
+  {
+    "name": "primarina",
+    "generation": 7
+  },
+  {
+    "name": "trumbeak",
+    "generation": 7
+  },
+  {
+    "name": "toucannon",
+    "generation": 7
+  },
+  {
+    "name": "gumshoos",
+    "generation": 7
+  },
+  {
+    "name": "charjabug",
+    "generation": 7
+  },
+  {
+    "name": "vikavolt",
+    "generation": 7
+  },
+  {
+    "name": "crabominable",
+    "generation": 7
+  },
+  {
+    "name": "ribombee",
+    "generation": 7
+  },
+  {
+    "name": "lycanroc",
+    "generation": 7
+  },
+  {
+    "name": "toxapex",
+    "generation": 7
+  },
+  {
+    "name": "mudsdale",
+    "generation": 7
+  },
+  {
+    "name": "araquanid",
+    "generation": 7
+  },
+  {
+    "name": "lurantis",
+    "generation": 7
+  },
+  {
+    "name": "shiinotic",
+    "generation": 7
+  },
+  {
+    "name": "salazzle",
+    "generation": 7
+  },
+  {
+    "name": "bewear",
+    "generation": 7
+  },
+  {
+    "name": "steenee",
+    "generation": 7
+  },
+  {
+    "name": "tsareena",
+    "generation": 7
+  },
+  {
+    "name": "golisopod",
+    "generation": 7
+  },
+  {
+    "name": "palossand",
+    "generation": 7
+  },
+  {
+    "name": "silvally",
+    "generation": 7
+  },
+  {
+    "name": "hakamo-o",
+    "generation": 7
+  },
+  {
+    "name": "kommo-o",
+    "generation": 7
+  },
+  {
+    "name": "cosmoem",
+    "generation": 7
+  },
+  {
+    "name": "solgaleo",
+    "generation": 7
+  },
+  {
+    "name": "lunala",
+    "generation": 7
+  },
+  {
+    "name": "naganadel",
+    "generation": 7
+  },
+  {
+    "name": "melmetal",
+    "generation": 7
+  },
+  {
+    "name": "scorbunny",
+    "generation": 8
+  },
+  {
+    "name": "sobble",
+    "generation": 8
+  },
+  {
+    "name": "skwovet",
+    "generation": 8
+  },
+  {
+    "name": "rookidee",
+    "generation": 8
+  },
+  {
+    "name": "blipbug",
+    "generation": 8
+  },
+  {
+    "name": "nickit",
+    "generation": 8
+  },
+  {
+    "name": "gossifleur",
+    "generation": 8
+  },
+  {
+    "name": "wooloo",
+    "generation": 8
+  },
+  {
+    "name": "chewtle",
+    "generation": 8
+  },
+  {
+    "name": "yamper",
+    "generation": 8
+  },
+  {
+    "name": "rolycoly",
+    "generation": 8
+  },
+  {
+    "name": "applin",
+    "generation": 8
+  },
+  {
+    "name": "silicobra",
+    "generation": 8
+  },
+  {
+    "name": "cramorant",
+    "generation": 8
+  },
+  {
+    "name": "arrokuda",
+    "generation": 8
+  },
+  {
+    "name": "toxel",
+    "generation": 8
+  },
+  {
+    "name": "sizzlipede",
+    "generation": 8
+  },
+  {
+    "name": "clobbopus",
+    "generation": 8
+  },
+  {
+    "name": "sinistea",
+    "generation": 8
+  },
+  {
+    "name": "hatenna",
+    "generation": 8
+  },
+  {
+    "name": "impidimp",
+    "generation": 8
+  },
+  {
+    "name": "milcery",
+    "generation": 8
+  },
+  {
+    "name": "falinks",
+    "generation": 8
+  },
+  {
+    "name": "pincurchin",
+    "generation": 8
+  },
+  {
+    "name": "snom",
+    "generation": 8
+  },
+  {
+    "name": "stonjourner",
+    "generation": 8
+  },
+  {
+    "name": "eiscue",
+    "generation": 8
+  },
+  {
+    "name": "indeedee",
+    "generation": 8
+  },
+  {
+    "name": "morpeko",
+    "generation": 8
+  },
+  {
+    "name": "cufant",
+    "generation": 8
+  },
+  {
+    "name": "dracozolt",
+    "generation": 8
+  },
+  {
+    "name": "arctozolt",
+    "generation": 8
+  },
+  {
+    "name": "dracovish",
+    "generation": 8
+  },
+  {
+    "name": "arctovish",
+    "generation": 8
+  },
+  {
+    "name": "duraludon",
+    "generation": 8
+  },
+  {
+    "name": "dreepy",
+    "generation": 8
+  },
+  {
+    "name": "zacian",
+    "generation": 8
+  },
+  {
+    "name": "zamazenta",
+    "generation": 8
+  },
+  {
+    "name": "eternatus",
+    "generation": 8
+  },
+  {
+    "name": "kubfu",
+    "generation": 8
+  },
+  {
+    "name": "zarude",
+    "generation": 8
+  },
+  {
+    "name": "regieleki",
+    "generation": 8
+  },
+  {
+    "name": "regidrago",
+    "generation": 8
+  },
+  {
+    "name": "glastrier",
+    "generation": 8
+  },
+  {
+    "name": "spectrier",
+    "generation": 8
+  },
+  {
+    "name": "calyrex",
+    "generation": 8
+  },
+  {
+    "name": "enamorus",
+    "generation": 8
+  },
+  {
+    "name": "thwackey",
+    "generation": 8
+  },
+  {
+    "name": "rillaboom",
+    "generation": 8
+  },
+  {
+    "name": "raboot",
+    "generation": 8
+  },
+  {
+    "name": "cinderace",
+    "generation": 8
+  },
+  {
+    "name": "drizzile",
+    "generation": 8
+  },
+  {
+    "name": "inteleon",
+    "generation": 8
+  },
+  {
+    "name": "greedent",
+    "generation": 8
+  },
+  {
+    "name": "corvisquire",
+    "generation": 8
+  },
+  {
+    "name": "corviknight",
+    "generation": 8
+  },
+  {
+    "name": "dottler",
+    "generation": 8
+  },
+  {
+    "name": "orbeetle",
+    "generation": 8
+  },
+  {
+    "name": "thievul",
+    "generation": 8
+  },
+  {
+    "name": "eldegoss",
+    "generation": 8
+  },
+  {
+    "name": "dubwool",
+    "generation": 8
+  },
+  {
+    "name": "drednaw",
+    "generation": 8
+  },
+  {
+    "name": "boltund",
+    "generation": 8
+  },
+  {
+    "name": "carkol",
+    "generation": 8
+  },
+  {
+    "name": "coalossal",
+    "generation": 8
+  },
+  {
+    "name": "flapple",
+    "generation": 8
+  },
+  {
+    "name": "appletun",
+    "generation": 8
+  },
+  {
+    "name": "sandaconda",
+    "generation": 8
+  },
+  {
+    "name": "barraskewda",
+    "generation": 8
+  },
+  {
+    "name": "toxtricity",
+    "generation": 8
+  },
+  {
+    "name": "centiskorch",
+    "generation": 8
+  },
+  {
+    "name": "grapploct",
+    "generation": 8
+  },
+  {
+    "name": "polteageist",
+    "generation": 8
+  },
+  {
+    "name": "hattrem",
+    "generation": 8
+  },
+  {
+    "name": "hatterene",
+    "generation": 8
+  },
+  {
+    "name": "morgrem",
+    "generation": 8
+  },
+  {
+    "name": "grimmsnarl",
+    "generation": 8
+  },
+  {
+    "name": "obstagoon",
+    "generation": 8
+  },
+  {
+    "name": "perrserker",
+    "generation": 8
+  },
+  {
+    "name": "cursola",
+    "generation": 8
+  },
+  {
+    "name": "sirfetchd",
+    "generation": 8
+  },
+  {
+    "name": "mr-rime",
+    "generation": 8
+  },
+  {
+    "name": "runerigus",
+    "generation": 8
+  },
+  {
+    "name": "alcremie",
+    "generation": 8
+  },
+  {
+    "name": "frosmoth",
+    "generation": 8
+  },
+  {
+    "name": "copperajah",
+    "generation": 8
+  },
+  {
+    "name": "drakloak",
+    "generation": 8
+  },
+  {
+    "name": "dragapult",
+    "generation": 8
+  },
+  {
+    "name": "urshifu",
+    "generation": 8
+  },
+  {
+    "name": "wyrdeer",
+    "generation": 8
+  },
+  {
+    "name": "kleavor",
+    "generation": 8
+  },
+  {
+    "name": "ursaluna",
+    "generation": 8
+  },
+  {
+    "name": "basculegion",
+    "generation": 8
+  },
+  {
+    "name": "sneasler",
+    "generation": 8
+  },
+  {
+    "name": "overqwil",
+    "generation": 8
+  },
+  {
+    "name": "pawmi",
+    "generation": 9
+  },
+  {
+    "name": "sprigatito",
+    "generation": 9
+  },
+  {
+    "name": "fuecoco",
+    "generation": 9
+  },
+  {
+    "name": "quaxly",
+    "generation": 9
+  },
+  {
+    "name": "lechonk",
+    "generation": 9
+  },
+  {
+    "name": "tarountula",
+    "generation": 9
+  },
+  {
+    "name": "nymble",
+    "generation": 9
+  },
+  {
+    "name": "tandemaus",
+    "generation": 9
+  },
+  {
+    "name": "fidough",
+    "generation": 9
+  },
+  {
+    "name": "smoliv",
+    "generation": 9
+  },
+  {
+    "name": "squawkabilly",
+    "generation": 9
+  },
+  {
+    "name": "nacli",
+    "generation": 9
+  },
+  {
+    "name": "charcadet",
+    "generation": 9
+  },
+  {
+    "name": "tadbulb",
+    "generation": 9
+  },
+  {
+    "name": "wattrel",
+    "generation": 9
+  },
+  {
+    "name": "maschiff",
+    "generation": 9
+  },
+  {
+    "name": "shroodle",
+    "generation": 9
+  },
+  {
+    "name": "bramblin",
+    "generation": 9
+  },
+  {
+    "name": "toedscool",
+    "generation": 9
+  },
+  {
+    "name": "klawf",
+    "generation": 9
+  },
+  {
+    "name": "capsakid",
+    "generation": 9
+  },
+  {
+    "name": "rellor",
+    "generation": 9
+  },
+  {
+    "name": "flittle",
+    "generation": 9
+  },
+  {
+    "name": "tinkatink",
+    "generation": 9
+  },
+  {
+    "name": "wiglett",
+    "generation": 9
+  },
+  {
+    "name": "bombirdier",
+    "generation": 9
+  },
+  {
+    "name": "finizen",
+    "generation": 9
+  },
+  {
+    "name": "varoom",
+    "generation": 9
+  },
+  {
+    "name": "cyclizar",
+    "generation": 9
+  },
+  {
+    "name": "orthworm",
+    "generation": 9
+  },
+  {
+    "name": "glimmet",
+    "generation": 9
+  },
+  {
+    "name": "greavard",
+    "generation": 9
+  },
+  {
+    "name": "flamigo",
+    "generation": 9
+  },
+  {
+    "name": "cetoddle",
+    "generation": 9
+  },
+  {
+    "name": "veluza",
+    "generation": 9
+  },
+  {
+    "name": "dondozo",
+    "generation": 9
+  },
+  {
+    "name": "tatsugiri",
+    "generation": 9
+  },
+  {
+    "name": "great-tusk",
+    "generation": 9
+  },
+  {
+    "name": "scream-tail",
+    "generation": 9
+  },
+  {
+    "name": "brute-bonnet",
+    "generation": 9
+  },
+  {
+    "name": "flutter-mane",
+    "generation": 9
+  },
+  {
+    "name": "slither-wing",
+    "generation": 9
+  },
+  {
+    "name": "sandy-shocks",
+    "generation": 9
+  },
+  {
+    "name": "iron-treads",
+    "generation": 9
+  },
+  {
+    "name": "iron-bundle",
+    "generation": 9
+  },
+  {
+    "name": "iron-hands",
+    "generation": 9
+  },
+  {
+    "name": "iron-jugulis",
+    "generation": 9
+  },
+  {
+    "name": "iron-moth",
+    "generation": 9
+  },
+  {
+    "name": "iron-thorns",
+    "generation": 9
+  },
+  {
+    "name": "frigibax",
+    "generation": 9
+  },
+  {
+    "name": "gimmighoul",
+    "generation": 9
+  },
+  {
+    "name": "wo-chien",
+    "generation": 9
+  },
+  {
+    "name": "chien-pao",
+    "generation": 9
+  },
+  {
+    "name": "ting-lu",
+    "generation": 9
+  },
+  {
+    "name": "chi-yu",
+    "generation": 9
+  },
+  {
+    "name": "roaring-moon",
+    "generation": 9
+  },
+  {
+    "name": "iron-valiant",
+    "generation": 9
+  },
+  {
+    "name": "koraidon",
+    "generation": 9
+  },
+  {
+    "name": "miraidon",
+    "generation": 9
+  },
+  {
+    "name": "walking-wake",
+    "generation": 9
+  },
+  {
+    "name": "iron-leaves",
+    "generation": 9
+  },
+  {
+    "name": "floragato",
+    "generation": 9
+  },
+  {
+    "name": "meowscarada",
+    "generation": 9
+  },
+  {
+    "name": "crocalor",
+    "generation": 9
+  },
+  {
+    "name": "skeledirge",
+    "generation": 9
+  },
+  {
+    "name": "quaxwell",
+    "generation": 9
+  },
+  {
+    "name": "quaquaval",
+    "generation": 9
+  },
+  {
+    "name": "oinkologne",
+    "generation": 9
+  },
+  {
+    "name": "spidops",
+    "generation": 9
+  },
+  {
+    "name": "lokix",
+    "generation": 9
+  },
+  {
+    "name": "pawmo",
+    "generation": 9
+  },
+  {
+    "name": "pawmot",
+    "generation": 9
+  },
+  {
+    "name": "maushold",
+    "generation": 9
+  },
+  {
+    "name": "dachsbun",
+    "generation": 9
+  },
+  {
+    "name": "dolliv",
+    "generation": 9
+  },
+  {
+    "name": "arboliva",
+    "generation": 9
+  },
+  {
+    "name": "naclstack",
+    "generation": 9
+  },
+  {
+    "name": "garganacl",
+    "generation": 9
+  },
+  {
+    "name": "armarouge",
+    "generation": 9
+  },
+    {
+      "name": "ceruledge",
+      "generation": 9
+    },
+    {
+      "name": "bellibolt",
+      "generation": 9
+    },
+    {
+      "name": "kilowattrel",
+      "generation": 9
+    },
+    {
+      "name": "mabosstiff",
+      "generation": 9
+    },
+    {
+      "name": "grafaiai",
+      "generation": 9
+    },
+    {
+      "name": "brambleghast",
+      "generation": 9
+    },
+    {
+      "name": "toedscruel",
+      "generation": 9
+    },
+    {
+      "name": "scovillain",
+      "generation": 9
+    },
+    {
+      "name": "rabsca",
+      "generation": 9
+    },
+    {
+      "name": "espathra",
+      "generation": 9
+    },
+    {
+      "name": "tinkatuff",
+      "generation": 9
+    },
+    {
+      "name": "tinkaton",
+      "generation": 9
+    },
+    {
+      "name": "wugtrio",
+      "generation": 9
+    },
+    {
+      "name": "palafin",
+      "generation": 9
+    },
+    {
+      "name": "revavroom",
+      "generation": 9
+    },
+    {
+      "name": "glimmora",
+      "generation": 9
+    },
+    {
+      "name": "houndstone",
+      "generation": 9
+    },
+    {
+      "name": "cetitan",
+      "generation": 9
+    },
+    {
+      "name": "annihilape",
+      "generation": 9
+    },
+    {
+      "name": "clodsire",
+      "generation": 9
+    },
+    {
+      "name": "farigiraf",
+      "generation": 9
+    },
+    {
+      "name": "dudunsparce",
+      "generation": 9
+    },
+    {
+      "name": "kingambit",
+      "generation": 9
+    },
+    {
+      "name": "arctibax",
+      "generation": 9
+    },
+    {
+      "name": "baxcalibur",
+      "generation": 9
+    },
+    {
+      "name": "gholdengo",
+      "generation": 9
+    }
+  ];
   
-];
-
-
-
-
 
 
 
 //this will get the generation of the mon from their name
-console.log(pokemonData.filter(item => item.name === 'pikachu').map(item => item.generation))
+console.log(pokemonData)
+
