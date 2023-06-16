@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-import pokemonData from "./staticData/staticData.js"
 
 function App() {
   const [inputText, setInputText] = useState('');

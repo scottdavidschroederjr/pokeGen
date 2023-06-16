@@ -1,27 +1,5 @@
-//https://pokeapi.co/api/v2/generation/
-//https://www.smogon.com/stats/2023-05/
-
-
-
-
-const tierValue = {
-  "AG" : 0,
-  "Uber": 1,
-  "OU": 2,
-  "UUBL": 3,
-  "UU": 4,
-  "RUBL": 5,
-  "RU": 6,
-  "NUBL": 7,
-  "NU": 8,
-  "PUBL": 9,
-  "PU": 10,
-  "Untiered": 11
-}
-
-
 //TODO there are dups in here, clean them up even though it won't effect its use
-const pokemonData = [
+const pokedex = [
   {
     "name": "bulbasaur",
     "generation": 1
@@ -4152,9 +4130,5 @@ const pokemonData = [
     }
   ];
   
-
-
-
-//this will get the generation of the mon from their name
-console.log(pokemonData)
+module.exports = {pokedex}
 
