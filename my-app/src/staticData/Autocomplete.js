@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { pokedex } from './pokedex';
-const { pullData } = require('./puppeteer.js');
 
 
 const AutocompleteInput = () => {
@@ -26,7 +25,7 @@ const AutocompleteInput = () => {
 
   const handleButtonSubmit = () => {
     // Run a function with the data input into the text field
-    pullData(inputValue);
+    //pullData(inputValue);
   };
 
   return (
