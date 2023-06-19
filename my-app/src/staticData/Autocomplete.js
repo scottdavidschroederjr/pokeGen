@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { pokedex } from './pokedex';
-const puppeteer = require('puppeteer');
-import { pullData } from './puppeteer';
+const { pullData } = require('./puppeteer.js');
+
 
 const AutocompleteInput = () => {
   const [inputValue, setInputValue] = useState('');
@@ -27,8 +26,7 @@ const AutocompleteInput = () => {
 
   const handleButtonSubmit = () => {
     // Run a function with the data input into the text field
-    console.log('Submitted data:', inputValue);
-    // Replace the console.log statement with your logic to handle the submitted data
+    pullData(inputValue);
   };
 
   return (

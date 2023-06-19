@@ -88,7 +88,7 @@ async function pullData(pokemon) {
             pokemonData["bestGeneration"] = x
             pokemonData["bestGenTier"] = pokemonData["generationData"][x]["tier"]
             pokemonData["altBestGeneration"] = []
-        } else if (tierValue[pokemonData["generationData"][x]["tier"]] == tierValue[pokemonData["bestGenTier"]]) {
+        } else if (tierValue[pokemonData["generationData"][x]["tier"]] === tierValue[pokemonData["bestGenTier"]]) {
             pokemonData["altBestGeneration"].push(x)
         }
 
@@ -99,6 +99,5 @@ async function pullData(pokemon) {
     console.log(pokemonData["bestGeneration"])
   }
   
-pullData("rillaboom");
 
-module.exports = { pullData }
+module.exports = {pullData}

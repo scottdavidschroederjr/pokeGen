@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import AutocompleteInput from './staticData/Autocomplete';
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
     <PokemonBox />
   </div>)
 }
+
+
 
 function InfoBox() {
   return (
