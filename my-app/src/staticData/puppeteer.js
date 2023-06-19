@@ -96,7 +96,9 @@ async function pullData(pokemon) {
         await browser.close();
         
     }
-
+    console.log(pokemonData["bestGeneration"])
   }
   
 pullData("rillaboom");
+
+module.exports = { pullData }

@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import AutocompleteInput from './staticData/Autocomplete';
 
 function App() {
   return (<div>
@@ -28,6 +29,7 @@ function ChooseBox() {
   return (
     <div class="chooseBox">
       <span class="Choose-your-Pokemon">Choose your Pokemon</span>
+      <AutocompleteInput />
     </div>
   )
 }
