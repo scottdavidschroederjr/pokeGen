@@ -1,60 +1,75 @@
 const puppeteer = require('puppeteer');
-const { tierValue } = require('./referenceData.js')
 const { generations } = require('./referenceData.js')
+const { tierValue } = require('./referenceData.js')
 const { pokedex } = require('./pokedex.js')
+
 
 async function pullData(pokemon) {
 
-    //TODO originGen needs to be set by input
+    //creating object to store mon's data
     let pokemonData = {
         "name" : pokemon,
         "bestGeneration": "",
+        "bestGenTier": "",
         "altBestGeneration": [],
-        "originGen": 1,        
+        "originGen": 0,        
         "generationData": {
             "1": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/rb/" + [pokemon] + ".png",
                 "page": ""
             },
             "2": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/c/" + [pokemon] + ".gif",
                 "page": ""
             },
             "3": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/rs/" + [pokemon] + ".png",
                 "page": ""
             },
             "4": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/dp/" + [pokemon] + ".png",
                 "page": ""
             },
             "5": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/bw/" + [pokemon] + ".gif",
                 "page": ""
             },
             "6": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/xy/" + [pokemon] + ".gif",
                 "page": ""
             },
             "7": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/xy/" + [pokemon] + ".gif",
                 "page": ""
             },
             "8": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/xy/" + [pokemon] + ".gif",
                 "page": ""
             },
             "9": {
                 "tier": "",
+                "sprite": "https://www.smogon.com/dex/media/sprites/xy/" + [pokemon] + ".gif",
                 "page": ""
             }
         }
 
     }
 
+    //gets proper origin gen from dex
+    pokemonData["originGen"] = pokedex[pokemon]
+
+    //getting data for every generation
     for (let x = pokemonData["originGen"]; x < 10; x++) {
 
-    //request site for each generation the mon has existed
+    //requesting site
         const browser = await puppeteer.launch({
             headless: 'new',
           });
@@ -65,18 +80,23 @@ async function pullData(pokemon) {
     //saves URL of info page
         pokemonData["generationData"][x]["page"] = requestUrl
 
-    //saves image of pokemon    
-
     //pulls what formats mon is used //TODO some pages have TWO values (mega rayqa), pull the higher
         pokemonData["generationData"][x]["tier"] = await page.$eval('.FormatList', el => el.innerText)
 
-    //TODO adjusts value for best gen (& wipes alt array) and adds to best gen array if tie
-
+    //updates best gen data
+        if (tierValue[pokemonData["generationData"][x]["tier"]] < tierValue[pokemonData["bestGenTier"]] || pokemonData["bestGeneration"] === "") {
+            pokemonData["bestGeneration"] = x
+            pokemonData["bestGenTier"] = pokemonData["generationData"][x]["tier"]
+            pokemonData["altBestGeneration"] = []
+        } else if (tierValue[pokemonData["generationData"][x]["tier"]] == tierValue[pokemonData["bestGenTier"]]) {
+            pokemonData["altBestGeneration"].push(x)
+        }
 
     //closes site request before loop
         await browser.close();
+        
     }
 
   }
   
-pullData("raichu");
+pullData("rillaboom");

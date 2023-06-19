@@ -17,7 +17,7 @@ const tierValue = {
     "Untiered": 11
   }
 
-  const generations = {
+const generations = {
     1: "RB",
     2: "GS",
     3: "RS",
@@ -29,5 +29,8 @@ const tierValue = {
     9: "SV"
   }
 
-module.exports = {tierValue}
-module.exports = {generations}
+
+module.exports = {
+  tierValue,
+  generations
+}
