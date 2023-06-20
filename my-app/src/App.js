@@ -10,8 +10,6 @@ function App() {
   </div>)
 }
 
-
-
 function InfoBox() {
   return (
     <div>

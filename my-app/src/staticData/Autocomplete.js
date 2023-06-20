@@ -24,13 +24,12 @@ const AutocompleteInput = () => {
   };
 
   const handleButtonSubmit = () => {
-    // Run a function with the data input into the text field
     //pullData(inputValue);
   };
 
   return (
     <div>
-      <input type="text" value={inputValue} onChange={handleInputChange} />
+      <input type="text" className='PokemonSearch' value={inputValue} onChange={handleInputChange} />
       <ul>
         {suggestions.map((suggestion) => (
           <li key={suggestion} onClick={() => handleSuggestionClick(suggestion)}>
