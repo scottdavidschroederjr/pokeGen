@@ -100,4 +100,4 @@ async function pullData(pokemon) {
   }
   
 
-module.exports = {pullData}
+export default pullData

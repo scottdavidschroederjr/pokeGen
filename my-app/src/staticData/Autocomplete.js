@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { pokedex } from './pokedex';
+import { pullData } from './puppeteer'
 
 
 const AutocompleteInput = () => {
@@ -32,7 +33,7 @@ const AutocompleteInput = () => {
       <input type="text" className='PokemonSearch' value={inputValue} onChange={handleInputChange} />
       <ul>
         {suggestions.map((suggestion) => (
-          <li key={suggestion} onClick={() => handleSuggestionClick(suggestion)}>
+          <li key={suggestion} className='Sugestion' onClick={() => handleSuggestionClick(suggestion)}>
             {suggestion}
           </li>
         ))}

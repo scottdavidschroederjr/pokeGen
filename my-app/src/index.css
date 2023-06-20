@@ -56,7 +56,7 @@ body {
   margin-top: 40px;
   margin-bottom: 40px;
   border: solid 6px #000;
-  background-color: #af0000;
+  background-color: #c91f1f;
   margin-left: auto;
   margin-right: auto;
   text-shadow: 2px 1px #000000;
@@ -94,7 +94,6 @@ body {
   font-size: 50px;
   font-weight: 500;
   color: #fff;
-
 }
 
 .Generation-X {
@@ -130,4 +129,30 @@ ul {
   margin-top: 10px;
   height: 20px;
   width: 150px;
+  color: #000000;
+  text-shadow: 0px 0px #000000;
+}
+
+/* Reset default button styles */
+input[type="submit"] {
+  border: none;
+  background: none;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Apply styling for the submit button */
+input[type="submit"] {
+  background-color: #4caf50;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
