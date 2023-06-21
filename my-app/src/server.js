@@ -1,11 +1,23 @@
 const express = require('express')
+const cors = require('cors');
+const { pullData } = require('./staticData/puppeteer.js')
 const app = express()
-const port = 3005
+const port = 3001
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(cors());
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
+
+//handles incoming POST requests
+app.post('/api/data', (req, res) => {
+  console.log("we made it")
+  const puppetData = pullData(req.body)
+  console.log(pullData)
+
+  res.json(puppetData)
+});
+
+//starts up the server
+app.listen(3001, () => {
+  console.log('Server is running on port 3001');
+});

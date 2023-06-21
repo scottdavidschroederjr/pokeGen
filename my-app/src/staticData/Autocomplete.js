@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { pokedex } from './pokedex';
-import { pullData } from './puppeteer'
+import axios from 'axios';
 
 
 const AutocompleteInput = () => {
@@ -24,10 +24,6 @@ const AutocompleteInput = () => {
     setSuggestions([]);
   };
 
-  const handleButtonSubmit = () => {
-    //pullData(inputValue);
-  };
-
   return (
     <div>
       <input type="text" className='PokemonSearch' value={inputValue} onChange={handleInputChange} />
@@ -38,10 +34,23 @@ const AutocompleteInput = () => {
           </li>
         ))}
       </ul>
-      <button onClick={handleButtonSubmit}>Submit</button>
+      <button onClick={() => handleSubmit(inputValue)}>Submit</button>
     </div>
   );
 };
+
+//for handing data
+const handleSubmit = async (data) => {
+  try {
+    const response = await axios.post('http://localhost:3001/api/data', data);
+    // Handle the response from the server here
+  } catch (error) {
+    // Handle any errors here
+  }
+};
+
+
+
 
 export default AutocompleteInput;
 

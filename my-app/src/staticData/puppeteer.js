@@ -97,7 +97,8 @@ async function pullData(pokemon) {
         
     }
     console.log(pokemonData["bestGeneration"])
+    return pokemonData
   }
   
 
-export default pullData
+module.exports = pullData
