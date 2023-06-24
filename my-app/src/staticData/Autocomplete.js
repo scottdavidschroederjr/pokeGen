@@ -3,10 +3,17 @@ import { pokedex } from './pokedex';
 import axios from 'axios';
 
 const AutocompleteInput = () => {
+//this section handles states
+
+  //these values manage States
     const [OutputValue, setOutput] = useState('');
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
+
+  //to hold the capitalized requested mon's name
+    
   
+  //makes the auto fill magic happen
     const handleInputChange = (event) => {
       const value = event.target.value;
       setInputValue(value);
@@ -18,30 +25,28 @@ const AutocompleteInput = () => {
     
         setSuggestions(filteredSuggestions);
       };
-    
-      const handleSuggestionClick = (suggestion) => {
+    const handleSuggestionClick = (suggestion) => {
         setInputValue(suggestion);
         setSuggestions([]);
       }
 
-      const handleSubmit = async (data) => {
+  //requests the data using puppet
+    const handleSubmit = async (data) => {
         try {
-          console.log(data)
           const response = await axios.post('http://localhost:3001/api/data', { data }, config);
           setOutput(response.data)
-          console.log(response.data)
-          
           return null
  
         } catch (error) {
+          //TODO make more visual error
           console.error(error);
         }
       };
-      
 
-    console.log(OutputValue)
-    //pre selection state
-    if (OutputValue == '') {
+//this section handles the visuals
+
+    //default state / pre-selection state
+    if (OutputValue === '') {
 
     return (
       <div>
@@ -59,14 +64,21 @@ const AutocompleteInput = () => {
       </div>
     );
     }
+
     //TODO waiting for data aka Promise state
 
-    //once data is returned, render new box
-    if (OutputValue != '') {
+    //data returned state
+    if (OutputValue !== '') {
       const imageUrl = OutputValue['generationData']['9']['sprite']
       const spriteStyle = {
         backgroundImage: `url(${imageUrl})`
       }
+
+    //capitalizing the mon's name again for visuals (all practical functions NEED lowercase)
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    const capitalizedString = capitalizeFirstLetter(OutputValue['name']);
 
       return (
         <div>
@@ -83,7 +95,7 @@ const AutocompleteInput = () => {
           </div>
           <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
           <div>
-            <div class="infoTitle" style={spriteStyle}><span class="pokemonName">{inputValue}</span></div>
+            <div class="infoTitle" style={spriteStyle}><span class="pokemonName">{capitalizedString}</span></div>
             <div class="infoBody">
               <span class="Generation-X">{OutputValue['bestGeneration']}</span>
               <span class="tier">{OutputValue['bestGenTier']}</span>
