@@ -100,5 +100,4 @@ async function pullData(pokemon) {
     return pokemonData
   }
   
-
-module.exports = pullData
+module.exports = { pullData };

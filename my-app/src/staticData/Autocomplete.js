@@ -34,20 +34,31 @@ const AutocompleteInput = () => {
           </li>
         ))}
       </ul>
-      <button onClick={() => handleSubmit(inputValue)}>Submit</button>
+      <button onClick={() => handleSubmit(inputValue) }>Submit</button>
     </div>
   );
 };
 
 //for handing data
-const handleSubmit = async (data) => {
-  try {
-    const response = await axios.post('http://localhost:3001/api/data', data);
-    // Handle the response from the server here
-  } catch (error) {
-    // Handle any errors here
+const config = {
+  headers: {
+    'Content-Type': 'application/json'
   }
 };
+
+const handleSubmit = async (data) => {
+  try {
+    console.log(data)
+    const response = await axios.post('http://localhost:3001/api/data', data, config);
+
+    //here's where we'd put all that data into the proper spots
+    console.log(response.data['bestGeneration']);
+    console.log(response.data['name']);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 
 
 
