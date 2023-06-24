@@ -5,10 +5,12 @@ const { pokedex } = require('./pokedex.js')
 
 
 
-async function pullData(pokemon) {
+async function pullData(pokemonInput) {
+    let pokemon = pokemonInput.toLowerCase()
+
     //creating object to store mon's data
     let pokemonData = {
-        "name" : pokemon,
+        "name" : [pokemonInput],
         "bestGeneration": "",
         "bestGenTier": "",
         "altBestGeneration": [],
@@ -64,7 +66,8 @@ async function pullData(pokemon) {
     }
 
     //gets proper origin gen from dex
-    pokemonData["originGen"] = pokedex[pokemon]
+    pokemonData["originGen"] = pokedex[pokemonInput]
+
 
     //getting data for every generation
     for (let x = pokemonData["originGen"]; x < 10; x++) {

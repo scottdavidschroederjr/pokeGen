@@ -1,13 +1,13 @@
-import './App.css';
 import React from 'react';
-import AutocompleteInput from './staticData/Autocomplete';
+import AutocompleteInput from './staticData/Autocomplete.js';
 
 function App() {
-  return (<div>
-    <InfoBox />
-    <ChooseBox />
-    <PokemonBox />
-  </div>)
+  return (
+    <div>
+      <InfoBox />
+      <ChooseBox />
+    </div>
+  );
 }
 
 function InfoBox() {
@@ -30,25 +30,6 @@ function ChooseBox() {
     <div class="chooseBox">
       <span class="Choose-your-Pokemon">Choose your Pokemon</span>
       <AutocompleteInput />
-    </div>
-  )
-}
-
-function PokemonBox() {
-  return (
-    <div>
-
-      <div class="infoTitle">
-        <span class="pokemonName">pokemonName</span>
-      </div>
-
-      <div class="infoBody">
-        <span class="Generation-X">Generation X</span>
-        <span class="tier">OU</span>
-        <br></br>
-        <span class="moreInfo">Get details on movesets and strategies</span>
-      </div>
-
     </div>
   )
 }
