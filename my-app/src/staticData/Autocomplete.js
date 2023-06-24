@@ -48,20 +48,16 @@ const config = {
 
 const handleSubmit = async (data) => {
   try {
-    console.log(data)
-    const response = await axios.post('http://localhost:3001/api/data', data, config);
+    const response = await axios.post('http://localhost:3001/api/data', {data}, config);
 
     //here's where we'd put all that data into the proper spots
+    console.log(response.data)
     console.log(response.data['bestGeneration']);
     console.log(response.data['name']);
   } catch (error) {
     console.error(error);
   }
 };
-
-
-
-
 
 export default AutocompleteInput;
 

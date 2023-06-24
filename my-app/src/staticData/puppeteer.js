@@ -4,8 +4,8 @@ const { tierValue } = require('./referenceData.js')
 const { pokedex } = require('./pokedex.js')
 
 
-async function pullData(pokemon) {
 
+async function pullData(pokemon) {
     //creating object to store mon's data
     let pokemonData = {
         "name" : pokemon,
@@ -96,7 +96,6 @@ async function pullData(pokemon) {
         await browser.close();
         
     }
-    console.log(pokemonData["bestGeneration"])
     return pokemonData
   }
   

@@ -1,15 +1,16 @@
 const express = require('express');
 const cors = require('cors');
-const { pullData } = require('./staticData/puppeteer.js')
+const bodyParser = require('body-parser');
+const { pullData } = require('./staticData/puppeteer.js');
+
 const app = express();
 
 app.use(cors());
+app.use(bodyParser.json()); // Use body-parser middleware
 
 // handles incoming POST requests
-app.post('/api/data', async (req, res)  => {
-  console.log(req.body);
-  const puppetData = await pullData("pikachu");
-  console.log(puppetData)
+app.post('/api/data', async (req, res) => {
+  const puppetData = await pullData(req.body['data']);
   res.json(puppetData);
 });
 

@@ -14,7 +14,9 @@ const tierValue = {
     "NU": 8,
     "PUBL": 9,
     "PU": 10,
-    "Untiered": 11
+    "Untiered": 11,
+    "LC": 12,
+    "NFE": 13
   }
 
 const generations = {
