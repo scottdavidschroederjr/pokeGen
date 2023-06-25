@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { pullData } = require('./staticData/puppeteer.js');
+const { pullData } = require('./scripts/puppeteer.js');
 
 const app = express();
 
