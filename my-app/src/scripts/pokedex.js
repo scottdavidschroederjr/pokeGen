@@ -137,7 +137,7 @@ const pokedex = {
     "Seadra": 1,
     "Seaking": 1,
     "Starmie": 1,
-    "Mr-mime": 1,
+    "Mr-Mime": 1,
     "Jynx": 1,
     "Electabuzz": 1,
     "Magmar": 1,
@@ -889,7 +889,7 @@ const pokedex = {
     "Perrserker": 8,
     "Cursola": 8,
     "Sirfetchd": 8,
-    "Mr-rime": 8,
+    "Mr-Rime": 8,
     "Runerigus": 8,
     "Alcremie": 8,
     "Frosmoth": 8,
@@ -1024,19 +1024,78 @@ const pokedex = {
     "Arceus-Psychic": 4,
     "Arceus-Rock": 4,
     "Arceus-Steel": 4,
-    "Arceus-Water": 4
+    "Arceus-Water": 4,
+    "Rotom-Fan": 4,
+    "Rotom-Frost": 4,
+    "Rotom-Heat": 4,
+    "Rotom-Mow": 4,
+    "Rotom-Wash": 4,
+    "Diglett-Alola": 7,
+    "Exeggutor-Alola": 7,
+    "Geodude-Alola": 7,
+    "Graveler-Alola": 7,
+    "Golem-Alola": 7,
+    "Grimer-Alola": 7,
+    "Marowak-Alola": 7,
+    "Meowth-Alola": 7,
+    "Muk-Alola": 7,
+    "Ninetales-Alola": 7,
+    "Persian-Alola": 7,
+    "Pikachu-Alola": 7,
+    "Raichu-Alola": 7,
+    "Raticate-Alola": 7,
+    "Rattata-Alola": 7,
+    "Sandshrew-Alola": 7,
+    "Sandslash-Alola": 7,
+    "Vulpix-Alola": 7,
+    "Articuno-Galar": 8,
+    "Corsola-Galar": 8,
+    "Darmanitan-Galar": 8,
+    "Darumaka-Galar": 8,
+    "Farfetchd-Galar": 8,
+    "Linoone-Galar": 8,
+    "Meowth-Galar": 8,
+    "Moltres-Galar": 8,
+    "Mr-Mime-Galar": 8,
+    "Ponyta-Galar": 8,
+    "Rapidash-Galar": 8,
+    "Slowbro-Galar": 8,
+    "Slowking-Galar": 8,
+    "Slowpoke-Galar": 8,
+    "Stunfisk-Galar": 8,
+    "Weezing-Galar": 8,
+    "Yamask-Galar": 8,
+    "Zapdos-Galar": 8,
+    "Zigzagoon-Galar": 8,
+    "Landorus-Therian": 5,
+    "Thundurus-Therian": 5,
+    "Tornadus-Therian": 5,
+    "Enamorus-Therian": 9,
+    "Palkia-Origin": 9,
+    "Dialga-Origin": 9,
+    "Giratina-Origin": 4,
+    "Deoxys-Attack": 3,
+    "Deoxys-Defense": 3,
+    "Deoxys-Speed": 3,
+    "Arcanine-Hisui": 9,
+    "Avalugg-Hisui": 9,
+    "Braviary-Hisui": 9,
+    "Decidueye-Hisui": 9,
+    "Electrode-Hisui": 9,
+    "Goodra-Hisui": 9,
+    "Growlithe-Hisui": 9,
+    "Lilligant-Hisui": 9,
+    "Qwilfish-Hisui": 9,
+    "Samurott-Hisui": 9,
+    "Sliggoo-Hisui": 9,
+    "Sneasel-Hisui": 9,
+    "Typhlosion-Hisui": 9,
+    "Voltorb-Hisui": 9,
+    "Zoroark-Hisui": 9,
+    "Zorua-Hisui": 9
   }
 
-  
+
 module.exports = {pokedex}
 
-
-//TODO adding
-//Hisuian forms (make them start in Gen 9 because they can't be in SS)
-//Galar forms
-//Therian Forms
-//Origin forms (start in Gen 9)
-//alolaian forms
-//rotom forms
-//Deoxys forms
 

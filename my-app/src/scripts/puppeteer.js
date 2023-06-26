@@ -7,8 +7,7 @@ const { pokedex } = require('./pokedex.js')
 
 async function pullData(pokemonInput) {
     let pokemon = pokemonInput.toLowerCase()
-    console.log(pokemonInput)
-
+    
     //creating object to store mon's data
     let pokemonData = {
         "name" : [pokemonInput],

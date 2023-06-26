@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { pokedex } from './pokedex';
 import axios from 'axios';
+const { pokedex } = require('./pokedex.js')
+
 
 const AutocompleteInput = () => {
 //this section handles states
