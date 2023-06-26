@@ -132,7 +132,7 @@ const AutocompleteInput = () => {
               <button onClick={() => handleSubmit(inputValue) }>Submit</button>
             </div>
             <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-            <div>
+            <div class="infoBox">
               <div class="infoTitle" style={spriteStyle}>
                 <span class="pokemonName">{capitalizedString}</span>
               </div>
