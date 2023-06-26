@@ -1007,12 +1007,36 @@ const pokedex = {
     "Kingambit": 9,
     "Arctibax": 9,
     "Baxcalibur": 9,
-    "Gholdengo": 9
+    "Gholdengo": 9,
+    "Arceus-Bug": 4,
+    "Arceus-Dark": 4,
+    "Arceus-Dragon": 4,
+    "Arceus-Electric": 4,
+    "Arceus-Fairy": 6,
+    "Arceus-Fighting": 4,
+    "Arceus-Fire": 4,
+    "Arceus-Flying": 4,
+    "Arceus-Ghost": 4,
+    "Arceus-Grass": 4,
+    "Arceus-Ground": 4,
+    "Arceus-Ice": 4,
+    "Arceus-Poison": 4,
+    "Arceus-Psychic": 4,
+    "Arceus-Rock": 4,
+    "Arceus-Steel": 4,
+    "Arceus-Water": 4
   }
 
   
 module.exports = {pokedex}
 
 
-
+//TODO adding
+//Hisuian forms (make them start in Gen 9 because they can't be in SS)
+//Galar forms
+//Therian Forms
+//Origin forms (start in Gen 9)
+//alolaian forms
+//rotom forms
+//Deoxys forms
 
