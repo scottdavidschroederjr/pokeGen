@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <InfoBox />
-      <ChooseBox />
+      <AutocompleteInput />
     </div>
   );
 }
@@ -23,16 +23,6 @@ function InfoBox() {
     </div>
   );
 }
-
-function ChooseBox() {
-  return (
-    <div>
-      <div class="chooseBox"><span class="Choose-your-Pokemon">Choose your Pokemon</span></div>
-      <AutocompleteInput />
-    </div>
-  )
-}
-
 
 export default App;
 

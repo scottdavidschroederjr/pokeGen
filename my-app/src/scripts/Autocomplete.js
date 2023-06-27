@@ -4,18 +4,16 @@ const { pokedex } = require('./pokedex.js')
 
 
 const AutocompleteInput = () => {
-//this section handles states
-
   //these values manage States
-    const [OutputValue, setOutput] = useState('');
-    const [inputValue, setInputValue] = useState('');
-    const [suggestions, setSuggestions] = useState([]);
+  const [OutputValue, setOutput] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
 
   //to hold the capitalized requested mon's name
     
   
   //makes the auto fill magic happen
-    const handleInputChange = (event) => {
+  const handleInputChange = (event) => {
       const value = event.target.value;
       setInputValue(value);
     
@@ -51,16 +49,17 @@ const AutocompleteInput = () => {
 
     return (
       <div>
-        <div>
-          <input type="text" className='PokemonSearch' value={inputValue} onChange={handleInputChange} />
+        <div className='chooseBox'>
+        <button class="button-30" role="button" onClick={() => handleSubmit(inputValue) }>Select Pokemon</button>
+          <input type="text" class="autocomplete-input" value={inputValue} onChange={handleInputChange} />
           <ul>
             {suggestions.map((suggestion) => (
-              <li key={suggestion} className='Sugestion' onClick={() => handleSuggestionClick(suggestion)}>
+              <li key={suggestion} className='autocomplete-item' onClick={() => handleSuggestionClick(suggestion)}>
                 {suggestion}
               </li>
             ))}
           </ul>
-          <button onClick={() => handleSubmit(inputValue) }>Submit</button>
+          
         </div>
       </div>
     );
@@ -120,8 +119,9 @@ const AutocompleteInput = () => {
   
         return (
           <div>
-            <div>
-              <input type="text" className='PokemonSearch' value={inputValue} onChange={handleInputChange} />
+            <div class="chooseBox">
+            <button class="button-30" role="button" onClick={() => handleSubmit(inputValue) }>Select Pokemon</button>
+              <input type="text" class="autocomplete-input" value={inputValue} onChange={handleInputChange} />
               <ul>
                 {suggestions.map((suggestion) => (
                   <li key={suggestion} className='Sugestion' onClick={() => handleSuggestionClick(suggestion)}>
@@ -129,9 +129,11 @@ const AutocompleteInput = () => {
                   </li>
                 ))}
               </ul>
-              <button onClick={() => handleSubmit(inputValue) }>Submit</button>
+
             </div>
+
             <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
             <div class="infoBox">
               <div class="infoTitle" style={spriteStyle}>
                 <span class="pokemonName">{capitalizedString}</span>
