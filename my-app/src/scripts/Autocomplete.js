@@ -9,9 +9,6 @@ const AutocompleteInput = () => {
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
 
-  //to hold the capitalized requested mon's name
-    
-  
   //makes the auto fill magic happen
   const handleInputChange = (event) => {
       const value = event.target.value;
@@ -38,19 +35,20 @@ const AutocompleteInput = () => {
  
         } catch (error) {
           //TODO make more visual error
-          console.error(error);
+          OutputValue = "error"
         }
       };
 
 //this section handles the visuals
-
     //default state / pre-selection state
+    console.log(inputValue)
+
     if (OutputValue === '') {
 
     return (
       <div>
         <div className='chooseBox'>
-        <button class="button-30" role="button" onClick={() => handleSubmit(inputValue) }>Select Pokemon</button>
+        <button class="button-30" onClick={() => handleSubmit(inputValue) }>Select Pokemon</button>
           <input type="text" class="autocomplete-input" value={inputValue} onChange={handleInputChange} />
           <ul>
             {suggestions.map((suggestion) => (
@@ -67,13 +65,38 @@ const AutocompleteInput = () => {
 
     //TODO waiting for data aka Promise state
 
+
+    //error catching
+    if (OutputValue === "error") {
+      return (
+        <div>
+          <div className='chooseBox'>
+            <button class="button-30" onClick={() => handleSubmit(inputValue) }>Select Pokemon</button>
+            <input type="text" class="autocomplete-input" value={inputValue} onChange={handleInputChange} />
+            <ul>
+                {suggestions.map((suggestion) => (
+                  <li key={suggestion} className='autocomplete-item' onClick={() => handleSuggestionClick(suggestion)}>
+                    {suggestion}
+                  </li>
+                ))}
+            </ul>
+          </div>
+            <br/><br/>
+          <div class="errorBox">We ran into an error searching for that Pokemon. Please try again!</div> 
+            <br/><br/>
+        </div>
+      )
+      
+    }
+
     //data returned state
     if (OutputValue !== '') {
 
       //pokemon sprite setup
       const imageUrl = OutputValue['generationData']['9']['sprite']
       const spriteStyle = {
-        backgroundImage: `url(${imageUrl})`, 
+        backgroundImage: `url(${imageUrl})`,
+        backgroundSize: `contain`,
       }
 
       //capitalizing the mon's name again for visuals (all practical functions NEED lowercase)
@@ -120,7 +143,7 @@ const AutocompleteInput = () => {
         return (
           <div>
             <div class="chooseBox">
-            <button class="button-30" role="button" onClick={() => handleSubmit(inputValue) }>Select Pokemon</button>
+            <button class="button-30" onClick={() => handleSubmit(inputValue) }>Select Pokemon</button>
               <input type="text" class="autocomplete-input" value={inputValue} onChange={handleInputChange} />
               <ul>
                 {suggestions.map((suggestion) => (

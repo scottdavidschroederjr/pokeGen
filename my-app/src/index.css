@@ -102,6 +102,20 @@ ul {
   text-shadow: 2px 2px 3px #000000;
   border-top: 10px;
 }
+/*error box*/
+.errorBox {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 350px;
+  height: 50px;
+  border: solid 6px #000;
+  background-color: #ffb0b0;
+  padding-top: 3px;
+  font-size: large;
+}
 
 /*for info box*/
 .infoBox {
@@ -199,4 +213,24 @@ td{
 
 .autocomplete-item.active {
   background-color: #e9e9e9;
+}
+
+/*progress bar CSS*/
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  animation: progressAnimation 2s linear infinite;
+}
+
+@keyframes progressAnimation {
+  0% { width: 0%; }
+  100% { width: 100%; }
 }

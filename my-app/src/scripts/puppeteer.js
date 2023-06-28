@@ -7,6 +7,11 @@ const { pokedex } = require('./pokedex.js')
 
 async function pullData(pokemonInput) {
     let pokemon = pokemonInput.toLowerCase()
+
+    //input validation
+    if (pokedex[pokemonInput] === undefined) {
+        return "error"
+    }
     
     //creating object to store mon's data
     let pokemonData = {
