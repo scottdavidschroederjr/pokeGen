@@ -162,11 +162,12 @@ const AutocompleteInput = () => {
                 <span class="pokemonName">{capitalizedString}</span>
               </div>
               <div class="infoBody">
-                <span class="Generation-X">Gen {OutputValue['bestGeneration']}</span>
-                <span class="tier">Tier: {OutputValue['bestGenTier']}</span>
+                <span class="Generation-X">Gen {OutputValue['bestGeneration']} - {OutputValue['bestGenTier']}</span>
                 <br></br>
-                <Table originGen={OutputValue.originGen} />
               </div>
+            </div>
+            <div class="TableOutput">
+              <Table originGen={OutputValue.originGen} />
             </div>
           </div>
         )
